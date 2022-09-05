@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>さくら銀行</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="header-container w-container">
+            <div class="site-logo">
+                <a href="index.html">
+                        <img src="img/logo.png" alt="さくら銀行">
+                </a>
+            </div>
+
+            <button class="navbtn" onclick="document.querySelector('html').classList.toggle('open')">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-xmark"></i>
+                <span>メニュー</span>
+            </button>
+
+            <!-- ハンバーガーメニュー展開後 -->
+            <nav class="hamburger-menu">
+                <div class="hamburger-menu-container">
+                    <div class="search-box">
+                        <input type="text" placeholder="検索する">
+                        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                    
+                    <div class="hamburger-menu-nav">
+                        <ul>
+                            <li><a tabindex="-1">ATM一覧<i class="fa-solid fa-circle-chevron-right"></i></a></li>
+                            <li><a tabindex="-1">お問い合わせ<i class="fa-solid fa-circle-chevron-right"></i></a></li>
+                        </ul>
+                        <h3 class="heading--lv3">目的から探す</h3>
+                        <ul>
+                            <li><a tabindex="-1">口座を開く<i class="fa-solid fa-circle-chevron-right"></i></a></li>
+                            <li><a tabindex="-1">ふやす・そなえる<i class="fa-solid fa-circle-chevron-right"></i></a></li>
+                            <li><a tabindex="-1">かりる<i class="fa-solid fa-circle-chevron-right"></i></a></li>
+                            <li><a tabindex="-1">便利に使う<i class="fa-solid fa-circle-chevron-right"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- ヘッダー上部ナビゲーション -->
+            <div class="nav-top">
+                <ul>
+                    <li>
+                        <a tabindex="-1">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>ATM</span>
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a tabindex="-1">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <span>検索</span>
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a tabindex="-1">
+                            <i class="fa-solid fa-circle-question"></i>
+                            <span>お問い合わせ</span>
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a class="nav-top-btn" tabindex="-1">口座開設</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- ナビゲーションメニュー -->
+        <nav class="g-nav">
+            <ul>
+                <li><a id="personal" tabindex="-1">個人のお客様</a></li>
+                <li><a tabindex="-1">法人のお客様</a></li>
+                <li><a tabindex="-1">さくら銀行について</a></li>
+                <li><a tabindex="-1">採用情報</a></li>
+            </ul>
+        </nav>
+
+        <!-- 個人用メニュー -->
+        <nav class="personal-menu close">
+            <div class="personal-menu-container w-container">
+                <div class="personal-menu-item">
+                    <h3>口座を開く</h3>
+                    <ul>
+                        <li><a tabindex="-1">口座予約</a></li>
+                        <li><a tabindex="-1">来店予約</a></li>
+                    </ul>
+                </div>
+        
+                <div class="personal-menu-item">
+                    <h3>ふやす・そなえる</h3>
+                    <ul>
+                        <li><a tabindex="-1">投資信託</a></li>
+                        <li><a tabindex="-1">外貨預金</a></li>
+                        <li><a tabindex="-1">個人向け国債</a></li>
+                    </ul>
+                </div>
+        
+                <div class="personal-menu-item">
+                    <h3>かりる</h3>
+                    <ul>
+                        <li><a tabindex="-1">住宅ローン</a></li>
+                        <li><a tabindex="-1">カードローン</a></li>
+                        <li><a tabindex="-1">教育ローン</a></li>
+                    </ul>
+                </div>
+        
+                <div class="personal-menu-item">
+                    <h3>便利に使う</h3>
+                    <ul>
+                        <li><a tabindex="-1">アプリのご案内</a></li>
+                        <li><a tabindex="-1">インターネットバンキング</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="close-btn">
+                <i class="fa-solid fa-xmark"></i>
+                <button>閉じる</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- メインビジュアル -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="login-area">
+                <p>インターネットバンキング</p>
+                <a class="login-btn" tabindex="-1">ログイン</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 重要なお知らせ -->
+    <section class="alert-area">
+        <div class="alert-container w-container">
+            <span class="label danger">重要なお知らせ</span>
+            <p>
+                インターネットバンキングを悪用した金融犯罪にご注意ください<i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </p>
+        </div>
+    </section>
+
+    <!-- 目的から探す -->
+    <section class="purpose">
+        <div class="w-container">
+            <h2 class="heading--lv2">目的から探す</h2>
+
+            <div class="purpose-item-container">
+                <ul>
+                    <li>
+                        <h3 class="heading--lv3">口座を開く</h3>
+                        <div class="purpose-icon">
+                            <img src="img/icon01.svg" alt="" width="60" height="60">
+                        </div>
+                        <a class="purpose-btn" tabindex="-1">口座開設<span><i class="fa-solid fa-angles-right"></i></span></a>
+                        <a class="purpose-btn" tabindex="-1">来店予約<span><i class="fa-solid fa-angles-right"></i></span></a>
+                    </li>
+ 
+                    <li>
+                        <h3 class="heading--lv3">ふやす・そなえる</h3>
+                        <div class="purpose-icon">
+                            <img src="img/icon02.svg" alt="" width="60" height="60">
+                        </div>
+                        <a class="purpose-btn" tabindex="-1">投資信託<span><i class="fa-solid fa-angles-right"></i></span></a>
+                        <a class="purpose-btn" tabindex="-1">外貨預金<span><i class="fa-solid fa-angles-right"></i></span></a>
+                        <a class="purpose-btn" tabindex="-1">個人向け国債<span><i class="fa-solid fa-angles-right"></i></span></a>
+                    </li>
+ 
+                    <li>
+                        <h3 class="heading--lv3">かりる</h3>
+                        <div class="purpose-icon">
+                            <img src="img/icon03.svg" alt="" width="60" height="60">
+                        </div>
+                        <a class="purpose-btn" tabindex="-1">住宅ローン<span><i class="fa-solid fa-angles-right"></i></span></a>
+                        <a class="purpose-btn" tabindex="-1">カードローン<span><i class="fa-solid fa-angles-right"></i></span></a>
+                        <a class="purpose-btn" tabindex="-1">教育ローン<span><i class="fa-solid fa-angles-right"></i></span></a>
+                    </li>
+
+                    <li>
+                        <h3 class="heading--lv3">便利に使う</h3>
+                        <div class="purpose-icon">
+                            <img src="img/icon04.svg" alt="" width="60" height="60">
+                        </div>
+                        <a class="purpose-btn" tabindex="-1">アプリのご案内<span><i class="fa-solid fa-angles-right"></i></span></a>
+                        <a class="purpose-btn" tabindex="-1">インターネット<br>バンキング<span><i class="fa-solid fa-angles-right"></i></span></a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ライフイベントから探す -->
+    <section class="life-event">
+        <div class="w-container">
+            <h2 class="heading--lv2">ライフイベントから探す</h2>
+
+            <div class="life-event-item-container">
+                <ul>
+                    <li>
+                        <a tabindex="-1">
+                            <h3 class="heading--lv3">就職</h3>
+                            <div class="life-event-icon">
+                                <img src="img/icon05.svg" alt="">
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a tabindex="-1">
+                            <h3 class="heading--lv3">結婚</h3>
+                            <div class="life-event-icon">
+                                <img src="img/icon06.svg" alt="">
+                            </div>
+                        </a>
+                    </li>
+      
+                    <li>
+                        <a tabindex="-1">
+                            <h3 class="heading--lv3">子育て・教育</h3>
+                            <div class="life-event-icon">
+                                <img src="img/icon07.svg" alt="">
+                            </div>
+                        </a>
+                    </li>
+ 
+                    <li>
+                        <a tabindex="-1">
+                            <h3 class="heading--lv3">マイホーム</h3>
+                            <div class="life-event-icon">
+                                <img src="img/icon08.svg" alt="">
+                            </div>
+                        </a>
+                    </li>
+       
+                    <li>
+                        <a tabindex="-1">
+                            <h3 class="heading--lv3">セカンドライフ</h3>
+                            <div class="life-event-icon">
+                                <img src="img/icon09.svg" alt="">
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a tabindex="-1">
+                            <h3 class="heading--lv3">贈与</h3>
+                            <div class="life-event-icon">
+                                <img src="img/icon10.svg" alt="">
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- キャンペーン -->
+    <section class="campaign">
+        <div class="w-container">
+            <h2 class="heading--lv2 white">キャンペーン</h2>
+            <div class="slider">
+                <div class="slider-container">
+                    <ul>
+                        <li class="active"><img src="img/banner1.webp" alt="" ></li>
+                        <li><img src="img/banner2.webp" alt="" width="300" height="150"></li>
+                    </ul>
+    
+                    <button id="prev">&laquo;</button>
+                    <button id="next">&raquo;</button>
+                </div>
+
+                <div class="slide-bottom-button">
+                </div>
+            </div>
+
+            <a class="pink-btn" tabindex="-1">キャンペーン一覧</a>
+        </div>
+    </section>
+
+    <!-- よくあるご質問 -->
+    <section class="faq">
+        <div class="w-container">
+            <h2 class="heading--lv2">よくあるご質問</h2>
+            
+            <div class="search-box">
+                <input type="text" placeholder="例: キャッシュカード 紛失">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            <dl>
+                <div class="faq-box">
+                    <div class="question">
+                        <dt>口座を開設するにはどうしたらいいですか？</dt>
+                        <i class="fa-solid fa-angles-down"></i>
+                    </div>
+                    <dd>窓口にて受け付けております。個人のお客様はWEB、アプリにてお手続きも可能です。</dd>
+                </div>
+               
+                <div class="faq-box">
+                    <div class="question">
+                        <dt>住所を変更するにはどうしたらいいですか？</dt>
+                        <i class="fa-solid fa-angles-down"></i>
+                    </div>
+                    <dd>
+                        住所変更のお手続きにつきましては、下記のページでご案内しております。<br>
+                        <a class="link-underline" tabindex="-1">住所変更のお手続き</a>
+                    </dd>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="question">
+                        <dt>暗証番号を忘れてしまいました。</dt>
+                        <i class="fa-solid fa-angles-down"></i>
+                    </div>
+                    <dd>窓口でのお手続きになります。大変恐れ入りますが、防犯上、ご本人様がお越しください。</dd>
+                </div>
+            </dl>
+
+            <a class="pink-btn" tabindex="-1">よくあるご質問トップ</a>
+        </div>
+    </section>
+
+    <!-- お知らせ・ニュースリリース -->
+    <section class="news">
+        <div class="w-container">
+            <h2 class="heading--lv2">お知らせ・ニュースリリース</h2>
+
+            <div class="tab-menu-container">
+                <ul class="tab-menu">
+                    <li><a class="active" data-id="information" tabindex="-1">お知らせ</a></li>
+                    <li><a data-id="news-release" tabindex="-1">ニュースリリース</a></li>
+                </ul>
+
+                <div class="tab-content active" id="information">
+                    <dl>
+                        <dt>2022年7月6日<span class="label orange">商品・サービス</span></dt>
+                        <dd>システムメンテナンスに伴う
+                            〇〇〇ダイレクト一時利用停止について
+                        </dd>
+
+                        <dt>2022年6月29日<span class="label orange">商品・サービス</span></dt>
+                        <dd>
+                            システムメンテナンスに伴う
+                            〇〇〇ダイレクト一時利用停止について
+                        </dd>
+
+                        <dt>2022年6月4日<span class="label orange">商品・サービス</span></dt>
+                        <dd>
+                            システムメンテナンスに伴う
+                            〇〇〇ダイレクト一時利用停止について
+                        </dd>
+                    </dl>
+                </div>
+
+                
+                <div class="tab-content" id="news-release">
+                    <dl>
+                        <dt>2022年7月1日<span class="label orange">企業・IR</span></dt>
+                        <dd>第1四半期報告書を掲載しました</dd>
+
+                        <dt>2022年5月18日<span class="label orange">企業・IR</span></dt>
+                        <dd>第1四半期報告書を掲載しました</dd>
+
+                        <dt>2022年4月24日<span class="label orange">企業・IR</span></dt>
+                        <dd>第1四半期報告書を掲載しました</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="footer-container w-container">
+            <div class="footer-sns">
+                <p>さくら銀行のSNS</p>
+                <ul>
+                    <li>
+                        <a  class="twitter" tabintabindex="-1">
+                            <i class="fa-brands fa-twitter"></i>
+                            <span class="sr-only">Twitter</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="facebook" tabintabindex="-1">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <span class="sr-only">Facebook</span>
+                        </a>
+                    </li>
+ 
+                    <li>
+                        <a class="youtube" tabintabindex="-1">
+                            <i class="fa-brands fa-youtube"></i>
+                            <span class="sr-only">Instagram</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-menu">
+                <div class="footer-menu-item">
+                    <h3>口座を開く</h3>
+                    <ul>
+                        <li><a tabintabindex="-1">口座予約</a></li>
+                        <li><a tabintabindex="-1">来店予約</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-menu-item">
+                    <h3>ふやす・そなえる</h3>
+                    <ul>
+                        <li><a tabindex="-1">投資信託</a></li>
+                        <li><a tabindex="-1">外貨預金</a></li>
+                        <li><a tabindex="-1">個人向け国債</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-menu-item">
+                    <h3>かりる</h3>
+                    <ul>
+                        <li><a tabindex="-1">住宅ローン</a></li>
+                        <li><a tabindex="-1">カードローン</a></li>
+                        <li><a tabindex="-1">教育ローン</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-menu-item">
+                    <h3>便利に使う</h3>
+                    <ul>
+                        <li><a tabindex="-1">アプリのご案内</a></li>
+                        <li><a tabindex="-1">インターネットバンキング</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-info">
+                <ul>
+                    <li><a tabindex="-1">サイトマップ</a></li>
+                    <li><a tabindex="-1">個人情報の取り扱いについて</a></li>
+                    <li><a tabindex="-1">勧誘方針</a></li>
+                    <li><a tabindex="-1">マネー・ローンダリングおよびテロ資金供与対策に係る基本方針</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copy"><p>&copy;Sakura Bank All Rights Reserved.</p></div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
