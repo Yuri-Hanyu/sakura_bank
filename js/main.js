@@ -130,6 +130,4 @@
             dt.parentNode.classList.toggle('appear');
         });
     });
-
-    
 }
